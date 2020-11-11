@@ -1,4 +1,7 @@
-package br.com.digitalhouse
+package digitalhouse
+
+import br.com.digitalhouse.Cliente
+import br.com.digitalhouse.Conta
 
 fun main() {
     val cliente = Cliente("Joao","Felipe")
