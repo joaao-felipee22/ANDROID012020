@@ -1,20 +1,18 @@
-import Aula8.Animal
+package Aula8
 
 class Cachorro(raca: String, nome: String): Animal(raca, nome) {
 
-    override val raca = "Buldogue"
+    override val tipo = "Cachorro"
+
+    override fun andar() {
+        println("Anda como um cachorro")
+    }
 
     fun latir(){
 
     }
 
     fun cavarBuraco(){
-        super.mamifero()
-    }
 
-    override fun respirar(){
-
-        println("Executa algo antes de chamar a fun respirar da super classe Animal")
-        super.respirar()
     }
 }

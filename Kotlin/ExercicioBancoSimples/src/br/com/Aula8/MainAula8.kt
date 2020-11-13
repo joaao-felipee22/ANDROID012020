@@ -1,17 +1,17 @@
 package Aula8
 
-import Cachorro
-
-fun main(args: Array<String>) {
+fun main() {
 
     val cachorro = Cachorro("RND", "Bidu")
     val gato = Gato("Siames", "Mingau")
 
-    cachorro.andar()
-    cachorro.cavarBuraco()
+    executar(cachorro)
+    executar(gato)
+}
 
-    gato.andar()
-    gato.miar()
+fun executar(animal: Animal){
+    animal.andar()
+    animal.respirar()
 }
 
 

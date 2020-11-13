@@ -1,16 +1,12 @@
 package Aula8
 
-open class Animal(open val raca: String, val nomeDoAnimal: String) {
+abstract class Animal(val raca: String, val nomeDoAnimal: String) {
 
-    fun andar(){
+    abstract val tipo: String
 
-    }
+    abstract fun andar()
 
     open fun respirar(){
-
-    }
-
-    protected fun mamifero(){
-
+        println("O animal do tipo $tipo respirou.")
     }
 }
