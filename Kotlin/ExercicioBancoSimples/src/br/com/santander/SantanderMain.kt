@@ -7,7 +7,7 @@ fun main() {
 //    saqueSemExcederSaldo()
 //    saqueExcedendoSaldo()
 //    saqueExcedendoSaldoEchequeEspecial()
-//    variosSaques()
+    variosSaques()
 
     /**Exemplos CONTA POUPANCA*/
 //    saqueSemExcederSaldoPoup()

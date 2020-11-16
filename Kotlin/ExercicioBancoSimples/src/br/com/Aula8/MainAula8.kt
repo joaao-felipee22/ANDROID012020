@@ -7,11 +7,18 @@ fun main() {
 
     executar(cachorro)
     executar(gato)
+
+    tomarMedicamento(cachorro)
+    tomarMedicamento(gato)
 }
 
 fun executar(animal: Animal){
     animal.andar()
     animal.respirar()
+}
+
+fun tomarMedicamento(animal: Saudavel){
+    animal.tomarMedicamento()
 }
 
 

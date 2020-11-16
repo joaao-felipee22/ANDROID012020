@@ -1,7 +1,7 @@
 package santander
 
 abstract class Conta(cliente: Cliente) {
-    var saldo = 0.0
+    protected var saldo = 0.0
 
     abstract fun sacar(valor: Double)
 
