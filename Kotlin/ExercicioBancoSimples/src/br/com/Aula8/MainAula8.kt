@@ -19,6 +19,7 @@ fun executar(animal: Animal){
 
 fun tomarMedicamento(animal: Saudavel){
     animal.tomarMedicamento()
+    animal.diagnostico
 }
 
 
