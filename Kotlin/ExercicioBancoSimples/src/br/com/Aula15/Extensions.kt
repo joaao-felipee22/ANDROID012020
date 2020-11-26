@@ -11,7 +11,7 @@ fun String.inverter(): String {
 }
 
 fun String.addLinhaTracejada(): String{
-    return "$this-----"
+    return "$this\n------------------------------------------------"
 }
 
 fun String.extensaoString(): String{
