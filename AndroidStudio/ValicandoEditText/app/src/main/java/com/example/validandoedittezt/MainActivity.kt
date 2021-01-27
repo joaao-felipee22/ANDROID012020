@@ -2,6 +2,7 @@ package com.example.validandoedittezt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         floatButton.setOnClickListener{
-            TODO("Chamar o metodo validateLogin e passar os itens que o usuario escreveu")
+            Toast.makeText(this, "Sua mae e puta", Toast.LENGTH_LONG).show()
         }
     }
 
