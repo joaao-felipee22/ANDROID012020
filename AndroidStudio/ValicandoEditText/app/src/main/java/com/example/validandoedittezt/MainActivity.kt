@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         floatButton.setOnClickListener{
-            Toast.makeText(this, "Sua mae e puta", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "TESTE", Toast.LENGTH_LONG).show()
         }
     }
 
