@@ -30,10 +30,8 @@ class PlaceholderFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        //inflando layout
         return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
@@ -41,6 +39,7 @@ class PlaceholderFragment : Fragment() {
         arguments?.let {
             view.findViewById<TextView>(R.id.fragment_name).text =
                 it.getString(FRAGMENT_NAME, "Empty name")
+
             view.findViewById<ConstraintLayout>(R.id.parent).setBackgroundColor(
                 ContextCompat.getColor(
                     requireContext(), it.getInt(
@@ -49,6 +48,7 @@ class PlaceholderFragment : Fragment() {
                     )
                 )
             )
+
         }
 
         super.onViewCreated(view, savedInstanceState)
