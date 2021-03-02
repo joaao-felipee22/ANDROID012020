@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.recyclerview.R
-import com.example.recyclerview.model.Aluno
+import com.example.recyclerview.model.Audio
 
 class DetalheAlunoActivity : AppCompatActivity() {
 
@@ -22,20 +22,20 @@ class DetalheAlunoActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-        val informacoes = intent.extras
-
-        if(informacoes != null){
-            val nomeAluno = informacoes.getString("NOME")
-            val matriculaAluno = informacoes.getString("MATRICULA")
-            val imagemAluno = informacoes.getInt("IMAGE")
-            val alunoRecebido = Aluno(nomeAluno, matriculaAluno, imagemAluno)
-
-            nomeAlunotxt.text = alunoRecebido.nome
-            matriculaAlunotxt.text = alunoRecebido.matricula
-            imagemViewAluno.setImageResource(imagemAluno)
-        } else {
-            Toast.makeText(this, "Erro ao carregar aluno", Toast.LENGTH_LONG).show()
-        }
+//        val informacoes = intent.extras
+//
+//        if(informacoes != null){
+//            val nomeAluno = informacoes.getString("NOME")
+//            val matriculaAluno = informacoes.getString("MATRICULA")
+//            val imagemAluno = informacoes.getInt("IMAGE")
+//            val alunoRecebido = Audio(nomeAluno, matriculaAluno, imagemAluno)
+//
+//            nomeAlunotxt.text = alunoRecebido.nome
+//            matriculaAlunotxt.text = alunoRecebido.matricula
+//            imagemViewAluno.setImageResource(imagemAluno)
+//        } else {
+//            Toast.makeText(this, "Erro ao carregar aluno", Toast.LENGTH_LONG).show()
+//        }
 
     }
 

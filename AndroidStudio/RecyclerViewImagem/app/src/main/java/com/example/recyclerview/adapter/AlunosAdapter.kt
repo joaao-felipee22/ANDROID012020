@@ -1,15 +1,15 @@
 package com.example.recyclerview.adapter
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.R
 import com.example.recyclerview.adapter.viewholder.AlunoViewHolder
-import com.example.recyclerview.model.Aluno
-import com.example.recyclerview.view.DetalheAlunoActivity
+import com.example.recyclerview.model.Audio
 
-class AlunosAdapter(private val alunosList: MutableList<Aluno>) : RecyclerView.Adapter<AlunoViewHolder>() {
+class AlunosAdapter(private val alunosList: MutableList<Audio>) : RecyclerView.Adapter<AlunoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlunoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.aluno_item, parent, false)
@@ -22,18 +22,15 @@ class AlunosAdapter(private val alunosList: MutableList<Aluno>) : RecyclerView.A
         val name = holder.name
         name.text = alunosList[position].nome
 
-        val matricula = holder.matricula
-        matricula.text = alunosList[position].matricula
+        holder.botaoAudio.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, alunosList[position].toString())
+                type = "text/plain"
+            }
 
-        val imagem = holder.imageAluno
-        imagem.setImageResource(alunosList[position].image)
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(it.context, DetalheAlunoActivity::class.java)
-            intent.putExtra("NOME", alunosList[position].nome)
-            intent.putExtra("MATRICULA", alunosList[position].matricula)
-            intent.putExtra("IMAGE", alunosList[position].image)
-            it.context.startActivity(intent)
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            it.context.startActivity(shareIntent)
         }
     }
 

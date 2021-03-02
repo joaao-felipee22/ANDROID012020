@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/bt_write_external"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permissao de escrita"/>
+
+    <Button
+        android:id="@+id/bt_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permissao de câmera"/>
+
+    <Button
+        android:id="@+id/bt_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permissao de mapa"/>
+
+    <Button
+        android:id="@+id/bt_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Todas as permissoes"/>
+</LinearLayout>
