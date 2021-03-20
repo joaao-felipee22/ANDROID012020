@@ -11,7 +11,7 @@ import com.example.recyclerview.model.Audio
 
 class MainActivity : AppCompatActivity() {
     val recycler by lazy { findViewById<RecyclerView>(R.id.recycler_view) }
-    val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
+    lateinit var toolbar : Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
