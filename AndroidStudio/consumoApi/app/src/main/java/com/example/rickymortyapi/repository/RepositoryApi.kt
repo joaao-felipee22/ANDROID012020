@@ -12,4 +12,5 @@ class RepositoryApi {
     private val serviceRick = RetrofitInit(url).create(service)
 
     suspend fun getCharacterService(): PersonagensResponse = serviceRick.getResponseCharacter()
+
 }

@@ -8,7 +8,7 @@ interface EndPointApi {
     @GET("character")
     suspend fun getResponseCharacter() : PersonagensResponse
 
-    @GET("localization")
+    @GET("location")
     suspend fun getResponseLocalization()
 
     @GET("episode")
